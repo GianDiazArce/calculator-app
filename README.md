@@ -27,8 +27,8 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [Solution URL here](https://www.frontendmentor.io/solutions/calculatorapp-gKWrrUNUR3)
+- Live Site URL: [Live site URL here](https://giandiazarce.github.io/calculator-app/)
 
 ## My process
 
