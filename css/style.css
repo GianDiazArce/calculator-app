@@ -1,0 +1,294 @@
+@import url('https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;700&display=swap');
+
+:root {
+    /* bg */
+    --background: hsl(222, 26%, 31%);
+    --bg-screen: hsl(224, 36%, 15%);
+    --bg-keypad: hsl(223, 31%, 20%);
+
+    /* keys */
+    --bg-reset: hsl(225, 21%, 49%);
+    --shadow-reset: hsl(224, 28%, 35%);
+    --bg-equal: hsl(6, 63%, 50%);
+    --shadow-equal: hsl(6, 70%, 34%);
+    --bg-key: hsl(30, 25%, 89%);
+    --shadow-key: hsl(28, 16%, 65%);
+
+    /* text */
+    --color-text: hsl(221, 14%, 31%);
+    --color-text2: hsl(198, 20%, 13%);
+    --white: hsl(0, 0%, 100%);
+}
+
+
+*, *:before, *:after {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'League Spartan', sans-serif;
+    background: var(--background);
+    transition: all .3s;
+    min-height: 100vh;
+    padding: .1px;
+}
+
+.wrapper {
+    width: 100%;
+    background: var(--background);
+    max-width: 325px;
+    margin: 0 auto;
+    margin-top: 2rem;
+    /* padding: .1px; */
+    /* padding: 2.25rem 1.2rem; */
+    display: flex;
+    flex-direction: column;
+    transition: all .3s;
+}
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    --header-color: var(--white);
+    color: var(--header-color);
+}
+
+.header__title {
+    color: inherit;
+}
+
+.theme {
+    display: flex;
+    gap: 1rem;
+    align-items: flex-end;
+    color: inherit;
+    font-size: .8rem;
+}
+
+.theme__title {
+    /* font-family: initial; */
+    letter-spacing: 1px;
+    padding-bottom: 4px;
+}
+
+.theme__change {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+    width: 4.375rem;
+}
+
+.theme__change-list {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 .5rem;
+    color: inherit;
+}
+
+.theme__change-btn {
+    width: 100%;
+    height: 1.5rem;
+    background-color: hsl(225, 30%, 21%);
+    border-radius: 20px;
+    padding: 0.25rem ;
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+}
+
+.theme__label {
+    cursor: pointer;
+}
+
+.theme-radio {
+    /* display: none; */
+    opacity: 0;
+    width: 1rem;
+}
+
+.theme__change-btn::after {
+    content: '';
+    cursor: pointer;
+    display: block;
+    /* width 80% from height parend */
+    width: 1rem;
+    position: absolute;
+    height: 1rem;
+    background-color: var(--bg-equal);
+    border-radius: 50%;
+    margin: 0 auto;
+    transition: transform .4s ease-in-out, background-color .4s ease-in-out;
+    transform: translateX(0);
+}
+
+.theme__change:hover .theme__change-btn::after {
+    background-color: var(--shadow-equal);
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    flex: 1;
+}
+
+.result {
+    background-color: var(--bg-screen);
+    margin-top: 2rem;
+    border-radius: .7rem;
+    height: 5.5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.result__value {
+    --display-color: var(--white);
+    color: var(--display-color);
+}
+
+.result__display {
+    display: flex;
+    justify-content: flex-end;
+    margin-right: 1rem;
+    width: 100%;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--white);
+}
+
+
+
+
+/* crear nueva variable y luego reasignar valor al cambiar de tema */
+.keys {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 18px 12px;
+    padding: 1.5rem;
+    width: 100%;
+    flex: 1;
+    /* height: 100px; */
+    background: var(--bg-keypad);
+    border-radius: .7rem;
+    margin-top: 1.5rem;
+    max-height: 29.43rem;
+}
+
+
+.key {
+    font-family: 'League Spartan', sans-serif;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    background-color: var(--bg-key);
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    max-height: 60px;
+    max-width: 60px;
+    font-size: 32px;
+    font-weight: bold;
+    padding-top: 5px;
+    text-transform: uppercase;
+    color: var(--color-text);
+    transition: background-color .2s ease-in-out;
+    --hover-bg: var(--shadow-key);
+    --shadow-color: var(--shadow-key);
+    box-shadow: 0px 5px 0px 0px var(--shadow-color);
+    -webkit-box-shadow: 0px 5px 0px 0px var(--shadow-color);
+    -moz-box-shadow: 0px 5px 0px 0px var(--shadow-color);
+}
+.key:hover {
+    --hover-bg: var(--white);
+    background-color: var(--hover-bg);
+}
+.key-del {
+    --color-reset: var(--white);
+    --shadow-color: var(--shadow-reset);
+    background-color: var(--bg-reset);
+    color: var(--color-reset);
+    font-size: 1.3rem;
+}
+
+.key-del:hover {
+    --hover-bg: rgb(162,179,225);
+    background-color: var(--hover-bg);
+}
+
+
+.key-reset {
+    --color-reset: var(--white);
+    --shadow-color: var(--shadow-reset);
+    background-color: var(--bg-reset);
+    color: var(--color-reset);
+    grid-column: span 2;
+    font-weight: bold;
+    width: 100%;
+    max-width: none;
+    font-size: 1.3rem;
+}
+
+.key-reset:hover {
+    --hover-bg: rgb(162,179,225);
+    background-color: var(--hover-bg);
+}
+
+.key-equal {
+    --color-equal: var(--white);
+    --shadow-color: var(--shadow-equal);
+    background-color: var(--bg-equal);
+    color: var(--color-equal);
+    grid-column: 3 / -1;
+    width: 100%;
+    max-width: none;
+    font-size: 1.5rem;
+}
+
+.key-equal:hover {
+    --hover-bg: rgb(249,108,91);
+    background-color: var(--hover-bg);
+}
+
+
+
+/* attribution frontendmentor */
+.attribution {
+    font-size: 11px;
+    text-align: center;
+    color: white;
+    margin-top: 3rem;
+}
+
+.attribution a {
+    color: hsl(0, 0%, 95%);
+}
+
+@media screen and (min-width: 768px) {
+    .wrapper {
+        max-width: 540px;
+        margin-top: 100px;
+    }
+    .keys {
+        gap: 28px 24px;
+    }
+    .key {
+        max-width: 100px;
+        height: 54px;
+    }
+    .key-reset {
+        max-width: none;
+    }
+    .key-equal {
+        max-width: none;
+    }
+}

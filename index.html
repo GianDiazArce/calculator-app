@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/theme.css">
+  <title>Frontend Mentor | Calculator app</title>
+
+  <style>
+    
+  </style>
+</head>
+<body>
+
+
+  <div class="wrapper">
+    <header class="header">
+      <div class="header__logo">
+        <h1 class="header__title">calc</h1>
+      </div>
+      <div class="theme">
+        <p class="theme__title">THEME</p>
+        <div class="theme__change">
+          <div class="theme__change-list">
+            <label for="theme1" class="theme__label">1</label>
+            <label for="theme2" class="theme__label">2</label>
+            <label for="theme3" class="theme__label">3</label>
+          </div>
+          <div class="theme__change-btn">
+            <input type="radio" class="theme-radio" value="1" name="theme-radio" id="theme1">
+            <input type="radio" class="theme-radio" value="2" name="theme-radio" id="theme2">
+            <input type="radio" class="theme-radio" value="3" name="theme-radio" id="theme3">
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="main">
+      <section class="result">
+        <div class="result__display">
+          <p id="display" class="result__value">0</p>
+        </div>
+      </section>
+
+      <section class="keys">
+        <button class="key">7</button>
+        <button class="key">8</button>
+        <button class="key">9</button>
+        <button class="key key-del">del</button>
+
+        <button class="key">4</button>
+        <button class="key">5</button>
+        <button class="key">6</button>
+        <button class="key">+</button>
+
+        <button class="key">1</button>
+        <button class="key">2</button>
+        <button class="key">3</button>
+        <button class="key">-</button>
+
+        <button class="key">.</button>
+        <button class="key">0</button>
+        <button class="key">/</button>
+        <button class="key">x</button>
+
+        <button class="key key-reset">RESET</button>
+        <button class="key key-equal">=</button>
+
+      </section>
+    </main>
+  </div>
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+  
+
+
+  <script src="js/script.js"></script>
+</body>
+</html>

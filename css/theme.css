@@ -1,0 +1,95 @@
+
+/* theme 2 */
+
+body[data-theme="theme-2"] {
+    --background: hsl(0, 0%, 90%);
+    --bg-screen: hsl(0, 0%, 93%);
+    --bg-keypad: hsl(0, 5%, 81%);
+    
+    /* keys */
+    --bg-reset:  hsl(185, 42%, 37%);
+    --shadow-reset: hsl(185, 58%, 25%);
+    --bg-equal: hsl(25, 98%, 40%);
+    --shadow-equal:  hsl(25, 99%, 27%);
+    --bg-key: hsl(45, 7%, 89%);
+    --shadow-key: hsl(35, 11%, 61%);
+    
+    /* text */
+    --color-text: hsl(60, 10%, 19%);
+    --color-text2: hsl(198, 20%, 13%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body[data-theme="theme-2"] .header {
+    --header-color: var(--color-text);
+}
+body[data-theme="theme-2"] .theme__change-btn::after {
+    transform: translateX(1.3rem);
+}
+body[data-theme="theme-2"] .result__value {
+    --display-color: var(--color-text);
+}
+body[data-theme="theme-2"] .key-del:hover {
+    --hover-bg: rgb(98,181,189);
+    background-color: var(--hover-bg);
+}
+body[data-theme="theme-2"] .key-reset:hover {
+    --hover-bg: rgb(98,181,189);
+    background-color: var(--hover-bg);
+}
+body[data-theme="theme-2"] .key-equal:hover {
+    --hover-bg: rgb(255,139,56);
+    background-color: var(--hover-bg);
+}
+
+/* theme 3 */
+
+body[data-theme="theme-3"] {
+    --background: hsl(268, 75%, 9%);
+    --bg-screen: hsl(268, 71%, 12%);
+    --bg-keypad: hsl(268, 71%, 12%);
+
+    /* keys */
+    --bg-reset:  hsl(281, 89%, 26%);
+    --shadow-reset: hsl(285, 91%, 52%);
+    --bg-equal: hsl(176, 100%, 44%);
+    --shadow-equal:  hsl(177, 92%, 70%);
+    --bg-key: hsl(268, 47%, 21%);
+    --shadow-key: hsl(290, 70%, 36%);
+
+    /* text */
+    --color-text: hsl(52, 100%, 62%);
+    --color-text2: hsl(198, 20%, 13%);
+    --white: hsl(0, 0%, 100%);
+}
+
+body[data-theme="theme-3"] .header {
+    --header-color: var(--color-text);
+}
+body[data-theme="theme-3"] .result__value {
+    --display-color: var(--color-text);
+}
+
+body[data-theme="theme-3"] .theme__change-btn::after {
+    transform: translateX(2.7rem);
+}
+
+body[data-theme="theme-3"] .key:hover {
+    --hover-bg: rgb(107,52,172);
+    background-color: var(--hover-bg);
+}
+body[data-theme="theme-3"] .key-del:hover {
+    --hover-bg: rgb(134,49,176);
+    background-color: var(--hover-bg);
+}
+body[data-theme="theme-3"] .key-reset:hover {
+    --hover-bg: rgb(134,49,176);
+    background-color: var(--hover-bg);
+}
+body[data-theme="theme-3"] .key-equal {
+    color: #000;
+}
+body[data-theme="theme-3"] .key-equal:hover {
+    --hover-bg: rgb(148,255,249);
+    background-color: var(--hover-bg);
+}
